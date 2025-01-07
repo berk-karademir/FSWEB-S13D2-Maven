@@ -53,10 +53,8 @@ public class Main {
                 digitsSum += i;
             }
         }
-        if ( digitsSum == number) {
-            return true;
-        }
-        return false;
+        return digitsSum == number ? true : false;
+        // turnery if can be used but " digitsSum == number " is simplified.
     }
 
     public static void printPerfectCheck(int number) {
