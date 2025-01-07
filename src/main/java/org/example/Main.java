@@ -65,47 +65,45 @@ public class Main {
         if ( number < 0) {
             return "Invalid Value";
         }
-        String numberStr = String.valueOf(number);
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < numberStr.length(); i++) {
-            char character = numberStr.charAt(i);
-            switch (character) {
+        char[] digits = String.valueOf(number).toCharArray();
+        String numToText = "";
+        for (char digit : digits) {
+            switch (digit) {
                 case '0':
-                    result.append("Zero ");
+                    numToText +=("Zero ");
                     break;
                 case '1':
-                    result.append("One ");
+                    numToText +=("One ");
                     break;
                 case '2':
-                    result.append("Two ");
+                    numToText +=("Two ");
                     break;
                 case '3':
-                    result.append("Three ");
+                    numToText +=("Three ");
                     break;
                 case '4':
-                    result.append("Four ");
+                    numToText +=("Four ");
                     break;
                 case '5':
-                    result.append("Five ");
+                    numToText +=("Five ");
                     break;
                 case '6':
-                    result.append("Six ");
+                    numToText +=("Six ");
                     break;
                 case '7':
-                    result.append("Seven ");
+                    numToText +=("Seven ");
                     break;
                 case '8':
-                    result.append("Eight ");
+                    numToText +=("Eight ");
                     break;
                 case '9':
-                    result.append("Nine ");
+                    numToText +=("Nine ");
                     break;
                 default:
-                    result.append("");
                     break;
             }
         }
-        return result.toString().trim();
+        return numToText.trim();
     }
     public static void printNumberToWords(int number) {
         System.out.println(number + " converted to words as this: " + numberToWords(number));
